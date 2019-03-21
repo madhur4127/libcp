@@ -1,0 +1,10 @@
+#!/bin/bash
+i=1
+while true
+do
+	echo ${i}
+	./gen ${i} > in
+	diff -w <(./brute < in) <(./f < in) || break
+	((i++))
+done
+
