@@ -1,7 +1,8 @@
+// https://codeforces.com/blog/entry/8080?#comment-307568
 /////////////////// FAST IO STARTS ///////////////////////////
 inline int readChar();
 template <class T = int> inline T readInt(); 
-template <class T> inline void writeInt( T x, char end = 0 );
+template <class T = int> inline void writeInt( T x, char end = 0 );
 inline void writeChar( int x ); 
 inline void writeWord( const char *s );
 //////////////////////////////////////////////////////////////
