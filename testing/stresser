@@ -2,7 +2,7 @@
 i=1
 while true
 do
-	echo ${i}
+	echo "Test Case: #${i}"
 	./gen ${i} > in
 	diff -w <(./brute < in) <(./f < in) || break
 	((i++))
