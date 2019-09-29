@@ -11,7 +11,7 @@ struct FenwickTree {
 	FenwickTree(int n): ft(n+1,0) {}
 	// vector - initial list where FT is constructed
 	FenwickTree(const vector<int>& list) {
-		ft.insert(ft.back(), list);
+		ft.insert(ft.end(), list.begin(), list.end());
 		for(int i=1; i<=(int)ft.size(); ++i){
 			int idx=i+(i&-i);
 			if(idx<=(int)ft.size())
