@@ -18,14 +18,14 @@ struct FenwickTree {
 				ft[idx]+=ft[i];
 		}
 	}
-	void update(int pos, ll dif) {
-		for (; pos < (int)ft.size(); pos |= pos + 1) 
+	void update(int pos, ll dif) { // pos (0-based indexing)
+		for ( ++pos; pos < (int)ft.size(); pos += pos & -pos) 
 			ft[pos] += dif;
 	}
 	ll query(int pos) { // sum of values in [0, pos]
 		ll res = 0;
-		for ( ++pos; pos; pos-=pos&-pos ) 
-			res += ft[pos-1];
+		for ( ++pos; pos; pos -= pos & -pos ) 
+			res += ft[pos];
 		return res;
 	}
 };
