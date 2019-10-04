@@ -12,8 +12,8 @@ using namespace std;
 #define SZ(x) ((int)(x).size())
 #define int ll
 #define el '\n'
-template<class T> bool rmn(T &a, T b) { return a > b ? (a = b, true) : false; }
-template<class T> bool rmx(T &a, T b) { return a < b ? (a = b, true) : false; }
+template<class T> bool inline rmn(T &a, T b) { return a > b ? (a = b, true) : false; }
+template<class T> bool inline rmx(T &a, T b) { return a < b ? (a = b, true) : false; }
 typedef long long ll; typedef long double ld; typedef double dd; typedef pair<int, int> pii;
 const ll INFLL=0x7f7f7f7f7f7f7f7f, MOD=1e9+7; const int INF=0x7f7f7f7f;
 
@@ -23,7 +23,7 @@ const ll INFLL=0x7f7f7f7f7f7f7f7f, MOD=1e9+7; const int INF=0x7f7f7f7f;
 #define DDD(x,y,z) cerr<<'('<<#x<<','<<#y<<','<<#z<<") are:\t"<<x<<' '<<y<<' '<<z<<'\n';
 
 /////////////////// VARIABLES & FUNCTIONS//////////////////////////
-vv<vv<pii>> adj; vv<int> vis, color; 
+vv<vv<int>> adj; vv<int> vis, color; 
 int dx8[]={0,1,1,1,0,-1,-1,-1}, dy8[]={1,1,0,-1,-1,-1,0,1},dx4[]={0,1,0,-1}, dy4[]={1,0,-1,0};
 inline ll mexp(ll x,ll n,ll m=MOD){ll res=1;x%=m;while(n){if(n&1)res=(res*x)%m;n>>=1;x=(x*x)%m;}return res;}
 inline ll gcd(ll a, ll b){if(a<0) a=-a; if(b<0) b=-b; while (a>0 && b>0){if(a>b)a%=b;else b%=a;}return a+b;}
