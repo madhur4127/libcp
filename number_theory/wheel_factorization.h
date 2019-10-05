@@ -14,3 +14,14 @@ vector<ll> wheel_factor(ll n) {
   if (n > 1) factorization.push_back(n);
   return factorization;
 }
+
+// for all divisors
+auto factors=wheel_factor(x); // Change x
+set<int> divisors{1};
+for(int& d: facs){
+	set<int> now=divs;
+	for(auto i: divs){
+		now.insert(i*d);
+	}
+	divs=now;
+}
