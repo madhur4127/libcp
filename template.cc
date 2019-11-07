@@ -32,7 +32,6 @@ inline ll gcd(ll a, ll b){if(a<0) a=-a; if(b<0) b=-b; while (a>0 && b>0){if(a>b)
 int32_t main(void){
 ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL);
 cout<<fixed;cerr<<fixed; cout<<setprecision(10); cerr<<setprecision(3);
-mt19937 genr(chrono::high_resolution_clock::now().time_since_epoch().count());
 
 
 
