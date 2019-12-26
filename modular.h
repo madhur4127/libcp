@@ -1,4 +1,4 @@
-template <int MOD>
+template <int MOD=MOD>
 struct Modular {
   int value;
   static const int MOD_value = MOD;
